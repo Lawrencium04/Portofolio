@@ -809,7 +809,8 @@
     "test": "test",
     "build": "react-scripts build",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "deploy": "gh-pages -d build",
+    "start": "react-scripts start"
   },
   "repository": {
     "type": "git",
@@ -820,7 +821,6 @@
   "bugs": {
     "url": "https://github.com/Lawrencium04/portofolio/issues"
   },
-  "homepage": "https://github.com/Lawrencium04/portofolio#readme",
   "browserslist": {
     "production": [
       ">0.2%",

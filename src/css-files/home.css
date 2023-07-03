@@ -3,37 +3,59 @@
     --border-size: calc(0.1vh + 0.1vw);
 }
 
+#home {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto;
+    width: 100vw;
+    height: 100vh;
+    justify-items: center;
+    align-items: center;
+}
+
 .window {
     display: grid;
-    position: absolute;
+    position: relative;
     grid-template-areas: 
     "bar"
     "cont";
     grid-template-rows: min-content min-content;
+    margin: 0;
     width: min-content;
+    height: min-content;
     border: 1px solid black;
     border-radius: calc(0.3vh + 0.3vw);
     overflow: hidden;
     box-shadow: calc(0.4vh + 0.4vw) calc(0.4vh + 0.4vw);
+    transition: bottom 0.1s ease-in-out, margin-top 0.15s ease-in-out, opacity 0.15s ease-in-out;
+}
+
+.win_handle {
+    box-sizing: border-box;
+    width: 101%;
+    height: calc(1.8vh + 1.8vw);
+    margin-left: -0.4rem;
+    z-index: 1;
+    position: absolute;
 }
 
 p {
     margin: 0;
     padding: 0;
+    z-index: 0;
 }
 
 .description {
-    left: 60vw;
-    top: 10vh;
+
 }
 
 .image {
-    left: 10vw;
-    top: 10vh;
+    
 }
 
 .closed {
-    display: none;
+    margin-top: 8vh;
+    opacity: 0;
 }
 
 .bar {
@@ -67,6 +89,7 @@ p {
     font-size: calc(0.6vh + 0.6vw);
     transition: all 0.1s ease-in-out;
     cursor: pointer;
+    z-index: 5;
 }
 
 .close:hover {
@@ -90,6 +113,7 @@ p {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    z-index: 0;
 }
 
 .description .content {

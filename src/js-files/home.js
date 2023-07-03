@@ -13,9 +13,10 @@ export default function Home() {
         <>
             <div id="home">
                 <Draggable
-                handle=".bar">
+                handle=".win_handle">
                     <div className="window image">
                         <div className="bar">
+                            <div className="win_handle"></div>
                             <p><b>Laurențiu</b>_Laslău.png</p>
                             <div style={{display: "inline-flex", width: "min-content"}}>
                             <button className="hide" onClick={handleButton}>_</button>
@@ -28,10 +29,11 @@ export default function Home() {
                     </div>
                 </Draggable>
                 <Draggable
-                handle=".bar">
+                handle=".win_handle">
                     <div className="window description">
                         <div className="bar">
-                            <p>my_<b>description</b>.png</p>
+                            <div className="win_handle"></div>
+                            <p>my_<b>description</b>.txt</p>
                             <div style={{display: "inline-flex", width: "min-content"}}>
                             <button className="hide" onClick={handleButton}>_</button>
                             <button className="close">x</button>
