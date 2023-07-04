@@ -11,6 +11,16 @@ export default function Home() {
         parent.className = "hidden " + parent.className;
     }
 
+    const closeWindow = (evt) => {
+        const parent = evt.target.offsetParent;
+
+        const buttonId = parent.className.match(/\S+/gi)[1] + "_window"
+
+        document.querySelectorAll("." + buttonId)[0].className = "hidden " + document.querySelectorAll("." + buttonId)[0].className;
+
+        parent.className = "closed " + parent.className;
+    }
+
     return (
         <>
             <div id="home">
@@ -22,7 +32,7 @@ export default function Home() {
                             <p><b>Laurențiu</b>_Laslău.png</p>
                             <div style={{display: "inline-flex", width: "min-content"}}>
                             <button className="hide" onClick={hideWindow}>_</button>
-                            <button className="close">x</button>
+                            <button className="close" onClick={closeWindow} >x</button>
                             </div>
                         </div>
                         <div className="content">
@@ -38,7 +48,7 @@ export default function Home() {
                             <p>my_<b>description</b>.txt</p>
                             <div style={{display: "inline-flex", width: "min-content"}}>
                             <button className="hide" onClick={hideWindow}>_</button>
-                            <button className="close">x</button>
+                            <button className="close" onClick={closeWindow}>x</button>
                             </div>
                         </div>
                         <div className="content">

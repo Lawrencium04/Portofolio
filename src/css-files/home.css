@@ -37,7 +37,8 @@
     margin-top 0.15s ease-in-out, 
     opacity 0.15s ease-in-out,
     box-shadow 0.1s ease-in-out,
-    margin 0.1s ease-in-out
+    margin 0.1s ease-in-out,
+    scale 0.1s ease-in-out
 }
 
 .win_handle {
@@ -65,9 +66,18 @@ p {
     grid-row: 1;
 }
 
-.hidden {
+#home .hidden {
     margin-top: 8vh;
     opacity: 0;
+}
+
+#home .closed {
+    opacity: 0;
+    scale: 0.8;
+}
+
+.hidden .win_handle, .closed .win_handle {
+    display: none;
 }
 
 .bar {
