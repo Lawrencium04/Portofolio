@@ -13,9 +13,14 @@
     align-items: center;
 }
 
+.react-draggable-dragging {
+    box-shadow: calc(0.5vh + 0.5vw) calc(0.5vh + 0.5vw) rgba(0, 0, 0, 0.795)!important;
+    margin: 0 calc(0.2vh + 0.2vw) calc(0.2vh + 0.2vw) 0 !important;
+}
+
 .window {
     display: grid;
-    position: relative;
+    position: absolute;
     grid-template-areas: 
     "bar"
     "cont";
@@ -26,8 +31,13 @@
     border: 1px solid black;
     border-radius: calc(0.3vh + 0.3vw);
     overflow: hidden;
-    box-shadow: calc(0.4vh + 0.4vw) calc(0.4vh + 0.4vw);
-    transition: bottom 0.1s ease-in-out, margin-top 0.15s ease-in-out, opacity 0.15s ease-in-out;
+    box-shadow: calc(0.3vh + 0.3vw) calc(0.3vh + 0.3vw) rgba(0, 0, 0, 0.884);
+    transition: 
+    bottom 0.1s ease-in-out, 
+    margin-top 0.15s ease-in-out, 
+    opacity 0.15s ease-in-out,
+    box-shadow 0.1s ease-in-out,
+    margin 0.1s ease-in-out
 }
 
 .win_handle {
@@ -45,15 +55,17 @@ p {
     z-index: 0;
 }
 
-.description {
-
-}
-
 .image {
-    
+    grid-column: 1;
+    grid-row: 1;
 }
 
-.closed {
+.description {
+    grid-column: 2;
+    grid-row: 1;
+}
+
+.hidden {
     margin-top: 8vh;
     opacity: 0;
 }

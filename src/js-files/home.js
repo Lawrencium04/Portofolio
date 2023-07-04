@@ -4,9 +4,11 @@ import { useRef, useEffect, useState } from "react"
 import Draggable from "react-draggable";
 
 export default function Home() {
+    
+    const hideWindow = (evt) => {
+        const parent = evt.target.offsetParent;
 
-    const handleButton = (evt) => {
-        evt.target.offsetParent.className = evt.target.offsetParent.className + " closed"
+        parent.className = "hidden " + parent.className;
     }
 
     return (
@@ -19,7 +21,7 @@ export default function Home() {
                             <div className="win_handle"></div>
                             <p><b>Laurențiu</b>_Laslău.png</p>
                             <div style={{display: "inline-flex", width: "min-content"}}>
-                            <button className="hide" onClick={handleButton}>_</button>
+                            <button className="hide" onClick={hideWindow}>_</button>
                             <button className="close">x</button>
                             </div>
                         </div>
@@ -35,7 +37,7 @@ export default function Home() {
                             <div className="win_handle"></div>
                             <p>my_<b>description</b>.txt</p>
                             <div style={{display: "inline-flex", width: "min-content"}}>
-                            <button className="hide" onClick={handleButton}>_</button>
+                            <button className="hide" onClick={hideWindow}>_</button>
                             <button className="close">x</button>
                             </div>
                         </div>
