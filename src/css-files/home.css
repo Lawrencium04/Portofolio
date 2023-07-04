@@ -103,6 +103,7 @@ p {
     place-content: center;
     background-color: white;
     border: 1px solid black;
+    border-radius: calc(0.15vh + 0.15vw);
     width: calc(1vw + 1vh);
     height: calc(1vw + 1vh);
     margin: 0 calc(0.2vh + 0.2vw);

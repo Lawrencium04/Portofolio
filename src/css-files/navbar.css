@@ -14,7 +14,7 @@
 #navbar img {
     height: 100%;
     image-rendering: crisp-edges;
-    transition: all 0.2s ease-in-out;
+    transition: all 0.1s ease-in-out;
 }
 
 #navbar img:hover {
@@ -41,6 +41,6 @@
 
 .hidden {
     opacity: 0;
-    width: 0;
+    margin-left: calc(-2vh - 2vw);
 }
 
