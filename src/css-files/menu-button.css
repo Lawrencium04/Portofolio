@@ -1,0 +1,29 @@
+.menu-btn {
+    display: flex;
+    flex-direction: column;
+    width: calc(4vh + 4vw);
+    height: calc(4vh + 4vw);
+    position: relative;
+    z-index: 10;
+    background-color: white;
+    padding: calc(0.2vh + 0.2vw);
+    transition: all 0.1s ease-in-out;
+}
+
+.menu-btn img {
+    place-self: center;
+    scale: 85%;
+    height: 72%;
+    width: 100%;
+    object-fit: cover ;
+}
+
+.menu-btn .btn-name {
+    height: min-content;
+    font-size: calc(0.6vh + 0.6vw);
+    text-align: center;
+}
+
+.menu-btn:hover {
+    filter: invert(100%);
+}
